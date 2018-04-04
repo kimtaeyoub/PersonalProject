@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
+
+	<VBox spacing="10">
+		<padding>
+			<Insets top="15" bottom="15" left="15" right="15" />
+		</padding>
+
+		<HBox spacing="10">
+
+			<VBox spacing="10">
+
+				<HBox spacing="10" alignment="CENTER_LEFT">
+					<Label text="고객명 :" />
+					<TextField fx:id="txtSalesCusName" promptText="구입고객명입력"
+						prefWidth="100" />
+					<Label text="고객 연락처 :" />
+					<TextField fx:id="txtSalesCusNum" promptText="구입고객 연락처입력"
+						prefWidth="180" />
+				</HBox>
+
+				<HBox spacing="10" alignment="CENTER_LEFT">
+					<Label text="판매물품 품번조회 :" />
+					<ComboBox fx:id="cbSalesSearch" promptText="판매할 품번선택"
+						prefWidth="150" />
+
+					<!-- <TextField fx:id="txtSalesSearch" promptText="조회할 품번입력" prefWidth="150" 
+						/> -->
+					<Button fx:id="btnSalesSearch" text="조회" prefWidth="60" />
+					<Button text="조회목록초기화" fx:id="btnSalesSearchClear"
+						prefWidth="110" />
+					<Button text="수량설정" fx:id="btnSalesCount" prefWidth="90" />
+				</HBox>
+
+
+				<TableView fx:id="SalesSearchTableView" prefWidth="570"
+					prefHeight="200" />
+			</VBox>
+
+			<ImageView fx:id="SalesImageView" fitWidth="300" fitHeight="350" />
+
+		</HBox>
+
+		<Label text="*****  판매 대기 목록    *****" />
+
+		<HBox spacing="100">
+
+			<VBox spacing="10">
+				<TableView fx:id="PreSalesTableView" prefWidth="570"
+					prefHeight="300" />
+
+				<HBox spacing="15" alignment="CENTER_RIGHT">
+					<Label text="총 수량 : " />
+					<TextField fx:id="txtPreSalesToTalCount" prefWidth="100" />
+					<Label text="총 금액 : " />
+					<TextField fx:id="txtPreSalesToTalPrice" prefWidth="100" />
+				</HBox>
+			</VBox>
+
+			<VBox spacing="20" alignment="CENTER">
+				<Button text="판매목록 현황" fx:id="btnSalesListView">
+					<font>
+						<Font size="15" />
+					</font>
+				</Button>
+				<Button text="판매수량 수정" fx:id="btnPreSalesEdit">
+					<font>
+						<Font size="15" />
+					</font>
+				</Button>
+				<Button text="판매대기 삭제" fx:id="btnPreSalesDelete">
+					<font>
+						<Font size="15" />
+					</font>
+				</Button>
+				<Button text="판 매" fx:id="btnPreSalesOk">
+					<font>
+						<Font size="15" />
+					</font>
+				</Button>
+				<Button text="종 료" fx:id="btnSalesExit">
+					<font>
+						<Font size="15" />
+					</font>
+				</Button>
+			</VBox>
+
+		</HBox>
+
+	</VBox>
+
+</AnchorPane>
+

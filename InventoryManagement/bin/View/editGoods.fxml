@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.chart.ValueAxis?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="300"
+	prefHeight="500">
+
+	<VBox spacing="100">
+		<padding>
+			<Insets left="15" />
+		</padding>
+
+		<VBox spacing="20">
+
+			<padding>
+				<Insets top="50" />
+			</padding>
+
+			<HBox spacing="10">
+
+				<Label text="  품번  :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditPnum" prefWidth="180"
+					prefHeight="30" promptText="상품번호" />
+
+			</HBox>
+
+			<HBox spacing="10">
+
+				<Label text="  품명  :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditPname" prefWidth="180"
+					prefHeight="30" promptText="상품명" />
+
+			</HBox>
+
+			<HBox spacing="10">
+
+				<Label text="  품종  :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditPkind" prefWidth="180"
+					prefHeight="30" promptText="상품종류" />
+
+			</HBox>
+
+
+
+			<HBox spacing="10">
+
+				<Label text="사이즈 :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditSize" prefWidth="180"
+					prefHeight="30" promptText="사이즈" />
+
+			</HBox>
+
+			<HBox spacing="10">
+
+				<Label text="  컬러  :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditColor" prefWidth="180"
+					prefHeight="30" promptText="컬러" />
+
+			</HBox>
+
+			<HBox spacing="10">
+
+				<Label text="  단가  :">
+					<font>
+						<Font size="20" />
+					</font>
+				</Label>
+				<TextField fx:id="txtStockEditPrice" prefWidth="180"
+					prefHeight="30" promptText="개당상품가격" />
+
+			</HBox>
+
+		</VBox>
+
+		<HBox spacing="30" alignment="CENTER">
+
+			<Button fx:id="btnStockEditOk" text="수 정" prefWidth="100"
+				prefHeight="25">
+				<font>
+					<Font size="20" />
+				</font>
+			</Button>
+
+			<Button fx:id="btnStockEditExit" text="취 소" prefWidth="100"
+				prefHeight="25">
+				<font>
+					<Font size="20" />
+				</font>
+			</Button>
+
+		</HBox>
+
+	</VBox>
+
+</AnchorPane>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+
+
+	<VBox spacing="10">
+
+		<padding>
+			<Insets top="15" bottom="15" left="15" right="15" />
+		</padding>
+
+		<HBox spacing="35" alignment="CENTER_LEFT">
+			<Label text="*****  판매 목록 현황    *****" />
+
+			<HBox spacing="3">
+				<Button fx:id="btnSalesSaveFileDir" text="저장 폴더 선택" />
+				<TextField fx:id="txtSalesSaveFileDir" prefWidth="200"
+					promptText="폴더를 선택하세요" />
+				<Button fx:id="btnSalesExcel" text="엑셀 파일" />
+				<Button fx:id="btnSalesPDF" text="PDF 파일" />
+			</HBox>
+		</HBox>
+
+		<HBox spacing="10">
+
+			<VBox spacing="10">
+
+				<HBox spacing="10" alignment="CENTER_LEFT">
+					<!-- <Label text="년도 :" /> <ComboBox fx:id="cbSalesListYear" promptText="년도선택" 
+						prefWidth="100" /> <Label text="월 :" /> <ComboBox fx:id="cbSalesListMonth" 
+						promptText="월선택" prefWidth="90" /> <Label text="일 :" /> <ComboBox fx:id="cbSalesListDay" 
+						promptText="일선택" prefWidth="90" /> -->
+					<Label text="기간으로 검색 :" prefWidth="130" />
+					<DatePicker fx:id="dpSalesListDateStart" />
+					<Label text=" ~ " />
+					<DatePicker fx:id="dpSalesListDateEnd" />
+					<Button text="검 색" fx:id="btnSalesListDateSearch" />
+				</HBox>
+
+				<HBox spacing="10" alignment="CENTER_LEFT">
+					<Label text="이름과 연락으로 검색 :" prefWidth="130" />
+					<TextField fx:id="txtSalesListNameSearch" prefWidth="100"
+						promptText="고객명입력" />
+					<Label text="/  고객 연락처 :" prefWidth="120" />
+					<TextField fx:id="txtSalesListCallSearch" prefWidth="122"
+						promptText="고객연락처" />
+					<Button text="검 색" fx:id="btnSalesListNameSearch" />
+				</HBox>
+
+			</VBox>
+
+			<Button text="전체목록" fx:id="btnSalesTotalList" prefHeight="55" />
+
+		</HBox>
+
+		<HBox spacing="20">
+
+			<VBox spacing="10">
+				<TableView fx:id="SalesListTableView" prefWidth="650"
+					prefHeight="600" />
+
+				<HBox spacing="30" alignment="CENTER_RIGHT">
+
+					<Label text="총수량 :" />
+					<TextField fx:id="txtSalesListTotalCount" prefWidth="100" />
+					<Label text="총금액 :" />
+					<TextField fx:id="txtSalesListTotalPrice" prefWidth="150" />
+
+				</HBox>
+			</VBox>
+
+			<VBox spacing="50" alignment="CENTER">
+				<ImageView fx:id="SalesListImageView" fitHeight="400"
+					fitWidth="300" />
+				<Button fx:id="btnSalesListDelete" text="판매목록 삭제">
+					<font>
+						<Font size="20" />
+					</font>
+				</Button>
+				<Button fx:id="btnSalesListExit" text="종 료">
+					<font>
+						<Font size="20" />
+					</font>
+				</Button>
+
+			</VBox>
+
+		</HBox>
+
+
+
+	</VBox>
+
+
+</AnchorPane>
+

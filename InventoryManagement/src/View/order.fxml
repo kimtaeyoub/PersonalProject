@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="1200"
+	prefHeight="800" fx:id="orderPane">
+
+	<HBox spacing="20">
+		<padding>
+			<Insets top="15" left="15" bottom="15" right="15" />
+		</padding>
+
+		<VBox spacing="28">
+
+			<HBox spacing="10" alignment="CENTER_LEFT">
+				<padding>
+					<Insets top="15" />
+				</padding>
+
+				<Label text="주문할물품 품번 조회:" prefWidth="120" />
+
+				<!-- <TextField fx:id="txtOrderSearch" promptText="검색할 품번입력" prefWidth="150" 
+					/> -->
+				<ComboBox fx:id="cbOrderSearch" promptText="주문할 품번선택"
+					prefWidth="150" />
+				<Button text="검색" fx:id="btnOrderSearch" prefWidth="60" />
+				<Button text="검색초기화" fx:id="btnOrderSearchClear" prefWidth="110" />
+				<Button text="수량설정" fx:id="btnOrderCount" prefWidth="90" />
+
+			</HBox>
+
+			<TableView fx:id="OrderSearchTableView" prefWidth="570"
+				prefHeight="200" />
+
+			<HBox spacing="60">
+				<padding>
+					<Insets top="10" left="10" />
+				</padding>
+
+				<ImageView fx:id="OrderImageView" fitWidth="300"
+					fitHeight="350" />
+
+				<VBox spacing="35" alignment="CENTER">
+
+					<Button text="주문수량 수정" fx:id="btnOrderEdit">
+						<font>
+							<Font size="17" />
+						</font>
+					</Button>
+
+					<Button text="주문목록 삭제" fx:id="btnOrderDelete">
+						<font>
+							<Font size="17" />
+						</font>
+					</Button>
+
+					<Button text="입고목록 등록" fx:id="btnWarehousing">
+						<font>
+							<Font size="17" />
+						</font>
+					</Button>
+
+					<Button text="입고목록 삭제" fx:id="btnWarehousingEdit">
+						<font>
+							<Font size="17" />
+						</font>
+					</Button>
+					<Button text="종 료" fx:id="btnOrderExit">
+						<font>
+							<Font size="17" />
+						</font>
+					</Button>
+
+				</VBox>
+
+			</HBox>
+
+		</VBox>
+
+		<VBox spacing="10">
+
+
+			<HBox spacing="35" alignment="CENTER_LEFT">
+				<Label text="*****  주문 목록    *****" />
+
+				<HBox spacing="3">
+					<Button fx:id="btnOrderSaveFileDir" text="저장 폴더 선택" />
+					<TextField fx:id="txtOrderSaveFileDir" prefWidth="200"
+						promptText="폴더를 선택하세요" />
+					<Button fx:id="btnOrderExcel" text="엑셀 파일" />
+					<Button fx:id="btnOrderPDF" text="PDF 파일" />
+				</HBox>
+			</HBox>
+
+			<HBox spacing="10" alignment="CENTER_LEFT">
+
+				<Label text="년도 :" />
+				<ComboBox fx:id="cbOrderListYear" promptText="년도선택"
+					prefWidth="100" />
+				<Label text="월 :" />
+				<ComboBox fx:id="cbOrderListMonth" promptText="월 선택"
+					prefWidth="90" />
+
+				<Button text="검색" fx:id="btnOrderListSearch" prefWidth="80" />
+
+				<Button text="전체목록" fx:id="btnOrderListTotal" prefWidth="80" />
+
+			</HBox>
+
+			<TableView fx:id="OrderListTableView" prefWidth="600"
+				prefHeight="300" />
+
+			<HBox spacing="30" alignment="CENTER_RIGHT">
+
+				<Label text="총수량 :" />
+				<TextField fx:id="txtOrderListTotalCount" prefWidth="100" />
+				<Label text="총금액 :" />
+				<TextField fx:id="txtOrderListTotalPrice" prefWidth="150" />
+
+			</HBox>
+
+
+			<HBox spacing="35" alignment="CENTER_LEFT">
+				<Label text="*****  입고 목록    *****" />
+				<HBox spacing="3">
+					<Button fx:id="btnWareSaveFileDir" text="저장 폴더 선택" />
+					<TextField fx:id="txtWareSaveFileDir" prefWidth="200"
+						promptText="폴더를 선택하세요" />
+					<Button fx:id="btnWareExcel" text="엑셀 파일" />
+					<Button fx:id="btnWarePDF" text="PDF 파일" />
+				</HBox>
+			</HBox>
+
+			<HBox spacing="10" alignment="CENTER_LEFT">
+
+				<Label text="년도 :" />
+				<ComboBox fx:id="cbWarehousingListYear" promptText="년도선택"
+					prefWidth="100" />
+				<Label text="월 :" />
+				<ComboBox fx:id="cbWarehousingListMonth" promptText="월 선택"
+					prefWidth="90" />
+
+				<Button text="검색" fx:id="btnWarehousingListSearch" prefWidth="80" />
+
+				<Button text="전체목록" fx:id="btnWarehousingListTotal"
+					prefWidth="80" />
+
+			</HBox>
+
+			<TableView fx:id="WarehousingListTableView" prefWidth="600"
+				prefHeight="300" />
+
+			<HBox spacing="30" alignment="CENTER_RIGHT">
+
+				<Label text="총수량 :" />
+				<TextField fx:id="txtWarehousingListTotalCount" prefWidth="100" />
+				<Label text="총금액 :" />
+				<TextField fx:id="txtWarehousingListTotalPrice" prefWidth="150" />
+
+			</HBox>
+
+
+
+
+		</VBox>
+
+
+	</HBox>
+
+
+</AnchorPane>
+
